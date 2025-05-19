@@ -9,6 +9,9 @@
 
 using namespace std;
 
+/**
+ * * @brief Esta clase es usada para crear vertices. Clase Vertex:: Vertex object
+ */
 class Vertex //Definición de la clase
 {
 private:

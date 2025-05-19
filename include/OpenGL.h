@@ -15,13 +15,16 @@
 
 using namespace std;
 
+/**
+ * * @brief Esta clase es usada para crear la ventana y cargar los shaders. Clase OpenGL:: OpenGL object
+ */
 class OpenGL
 {
 public:
     OpenGL();
     GLFWwindow* createWindow(long width, long height, std::string title);
     GLuint loadShaders(const char * vertex_file_path,const char * fragment_file_path);
-
+    GLuint getProgramID();
 private:
     GLuint programID;
 

@@ -1,6 +1,8 @@
 #include "../include/OpenGL.h"
 
-
+/**
+ * @brief Constructor de la clase OpenGL:: OpenGL object
+ */
 OpenGL::OpenGL()
 {
     glewExperimental = true; // Needed for core profile
@@ -15,6 +17,13 @@ OpenGL::OpenGL()
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // We don't want the old OpenGL
 }
 
+/**
+ * @brief Método que crea la ventana y carga los shaders
+ * @param long width Ancho de la ventana
+ * @param long height Alto de la ventana
+ * @param std::string title Título de la ventana
+ * @return GLFWwindow* Ventana creada
+ */
 GLFWwindow* OpenGL::createWindow(long width, long height, std::string title)
 {
     GLFWwindow* window = glfwCreateWindow( width, height, title.c_str(), NULL, NULL);
@@ -38,6 +47,12 @@ GLFWwindow* OpenGL::createWindow(long width, long height, std::string title)
     return (window);
 }
 
+/**
+ * @brief Método que carga los shaders
+ * @param const char* vertex_file_path Ruta del archivo del shader de vértices
+ * @param const char* fragment_file_path Ruta del archivo del shader de fragmentos
+ * @return GLuint ID del programa de shaders
+ */
 GLuint OpenGL::loadShaders(const char * vertex_file_path,const char * fragment_file_path)
 {
 	// Create the shaders
@@ -124,4 +139,13 @@ GLuint OpenGL::loadShaders(const char * vertex_file_path,const char * fragment_f
 	glDeleteShader(FragmentShaderID);
 
 	return ProgramID;
+}
+
+/**
+ * @brief Método que regresa el ID del programa de shaders
+ * @return GLuint ID del programa de shaders
+ */
+GLuint OpenGL::getProgramID()
+{
+	return this->programID;
 }

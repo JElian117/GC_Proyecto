@@ -5,6 +5,9 @@
 
 #include "Model.h"
 
+/**
+ * * @brief Esta clase es usada para crear objetos usando un archivo obj. Clase Obj:: Obj object
+ */
 class Obj:public Model{
 public:
     Obj(string file_name);

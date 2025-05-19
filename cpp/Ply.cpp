@@ -1,17 +1,32 @@
 #include "../include/Ply.h"
 
+/**
+ * @brief Constructor de la clase Ply:: Ply object
+ * @param string file_name Nombre del archivo
+ */
 Ply::Ply(string file_name):Model(file_name){
     this->load(file_name);
 }
 
+/**
+ * @brief Constructor de la clase Ply:: Ply object
+ */
 Ply::Ply():Model(){
 
 }
 
+/**
+ * @brief Método que establece el nombre del archivo
+ * @param string file_name Nombre del archivo
+ */
 void Ply::set_file_name(string file_name){
     this->load(file_name);
 }
 
+/**
+ * @brief Método que carga el archivo
+ * @param string file_name Nombre del archivo
+ */
 void Ply::load(string file_name){
     string line;
     ifstream PLYfile(file_name);

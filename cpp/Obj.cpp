@@ -1,18 +1,33 @@
 #include "../include/Obj.h"
 
+/**
+ * @brief Constructor de la clase Obj:: Obj object
+ * @param string file_name Nombre del archivo
+ */
 Obj::Obj(string file_name):Model(file_name)
 {
     this->load(file_name);
 }
 
+/**
+ * @brief Constructor de la clase Obj:: Obj object
+ */
 Obj::Obj():Model(){
 
 }
 
+/**
+ * @brief Método que establece el nombre del archivo
+ * @param string file_name Nombre del archivo
+ */
 void Obj::set_file_name(string file_name){
     this->load(file_name);
 }
 
+/**
+ * @brief Método que carga el archivo
+ * @param string file_name Nombre del archivo
+ */
 void Obj::load(string file_name){
     string line;
     ifstream OBJfile(file_name);

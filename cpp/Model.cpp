@@ -1,29 +1,36 @@
 #include "../include/Model.h"
 
+/**
+ * @brief Constructor de la clase Model:: Model object
+ * @param string file_name Nombre del archivo
+ */
 Model::Model(string file_name){
     this->faces = {};
     this->vertices = {};
-    this->transform = { (1, 0, 0, 0),
-                        (0, 1, 0, 0),
-                        (0, 0, 1, 0),
-                        (0, 0, 0, 1)};
+    this->model = glm::mat4(1.0f);
     this->r = 0.0f;
     this->g = 0.0f;
     this->b = 0.0f;
 }
 
+/**
+ * @brief Constructor de la clase Model:: Model object
+ */
 Model::Model(){
     this->faces = {};
     this->vertices = {};
-    this->transform = { (1, 0, 0, 0),
-                        (0, 1, 0, 0),
-                        (0, 0, 1, 0),
-                        (0, 0, 0, 1)};
+    this->model = glm::mat4(1.0f);
     this->r = 0.0f;
     this->g = 0.0f;
     this->b = 0.0f;
 }
 
+/**
+ * @brief Método que carga el archivo
+ * @param string file_name Nombre del archivo
+ * @param delim Delimitador
+ * @return vector<string> Vértices del objeto
+ */
 vector<string> Model::split(const string& org_str, const char& delim){
     vector<string> str_array;
     stringstream ss(org_str);
@@ -37,6 +44,9 @@ vector<string> Model::split(const string& org_str, const char& delim){
     return str_array;
 }
 
+/**
+ * @brief Método que imprime los vértices del objeto
+ */
 void Model::print(){
     for(unsigned int ind_face = 0; ind_face < this->faces.size(); ind_face++){
         cout<<"Cara "<<ind_face+1<<endl;
@@ -47,32 +57,66 @@ void Model::print(){
     }
 }
 
-void Model::set_transform(arma::Mat<float> transform){
-    this->transform = transform;
+/**
+ * @brief Método setter que establece la matriz de transformación
+ * @param glm::mat4 transform Matriz de transformación
+ */
+void Model::set_transform(glm::mat4 transform){
+    this->model = transform;
 }
 
+/**
+ * @brief Método setter que establece el color del objeto
+ * @param float r Componente roja
+ * @param float g Componente verde
+ * @param float b Componente azul
+ */
 void Model::set_color(float r, float g, float b){
     this->r = r;
     this->g = g;
     this->b = b;
 }
 
-void Model::draw(){
+/**
+ * @brief Método getter que regresa la matriz de transformación
+ * @return glm::mat4 Matriz de transformación
+ */
+glm::mat4 Model::get_transform(){
+    return this->model;
+}
+
+/**
+ * @brief Método que regresa los datos de los vértices
+ * @return vector<GLfloat> Datos de los vértices
+ */
+vector<GLfloat> Model::get_vertex_buffer_data()
+{
     vector<GLfloat> vertex_data = {};
-    vector<GLfloat> vertex_color = {};
-    
+
     for(Face f:this->faces){
         for(unsigned int iv: f.get_vertices()){
-            arma::Mat<float> v = this->transform * this->vertices[iv].h();
-            
-            vertex_data.push_back(v.at(0, 0));
-            vertex_data.push_back(v.at(1, 0));
-            vertex_data.push_back(v.at(2, 0));
+            vertex_data.push_back(this->vertices[iv].get_x());
+            vertex_data.push_back(this->vertices[iv].get_y());
+            vertex_data.push_back(this->vertices[iv].get_z());
+        }
+    }
+    return vertex_data;
+}
+
+/**
+ * @brief Método que regresa los datos de los colores de los vértices
+ * @return vector<GLfloat> Datos de los colores de los vértices
+ */
+vector<GLfloat> Model::get_vertex_color_data()
+{
+    vector<GLfloat> vertex_color = {};
+
+    for(Face f:this->faces){
+        for(unsigned int iv: f.get_vertices()){
             vertex_color.push_back(this->r);
             vertex_color.push_back(this->g);
             vertex_color.push_back(this->b);
         }
     }
-    Triangle tr1(vertex_data , vertex_color);
-    tr1.draw();
+    return vertex_color;
 }

@@ -10,6 +10,9 @@
 
 using namespace std;
 
+/**
+ * * @brief Esta clase es usada para crear un objeto Face. Clase Face:: Face object
+ */
 class Face
 {
 private:

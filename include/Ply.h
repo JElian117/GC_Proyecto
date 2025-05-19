@@ -5,6 +5,9 @@
 
 #include "Model.h"
 
+/**
+ * * @brief Esta clase es usada para crear objetos usando un archivo ply. Clase Ply:: Ply object
+ */
 class Ply:public Model{
 public:
     Ply(string file_name);
