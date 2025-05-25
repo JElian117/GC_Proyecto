@@ -108,6 +108,15 @@ int main(){
             car.set_view(4);
             obstacle.set_view(4);
         }
+        // Cambiar la vista del carro y el obstáculo.
+        else if (glfwGetKey(window, GLFW_KEY_8) == GLFW_PRESS){
+            car.set_view(8);
+            obstacle.set_view(8);
+        }
+        else if (glfwGetKey(window, GLFW_KEY_9) == GLFW_PRESS){
+            car.set_view(9);
+            obstacle.set_view(9);
+        }
         
     } while ( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS && glfwWindowShouldClose(window) == 0 );
 

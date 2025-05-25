@@ -102,5 +102,17 @@ void Obstacle::set_view(unsigned int key){
  * @param unsigned int key Tecla para cambiar la proyección
  */
 void Obstacle::set_projection(unsigned int key){
-
+    if(key == 8){
+        this->projection = glm::perspective(
+            glm::radians(45.0f), // The vertical Field of View
+            (float)1000 / (float)600, // Aspect Ratio
+            0.1f, // Near clipping plane
+            100.0f // Far clipping plane
+        );
+    }
+    else if(key == 9){
+        this->projection = glm::ortho(
+            -1.0f, 1.0f, -1.0f, 1.0f, 0.1f, 100.0f
+        );
+    }
 }
