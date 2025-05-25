@@ -20,7 +20,7 @@ Car::Car (Vertex inital_pos, GLuint programID){
     this->transform =   an.T(initial_pos.get_x(), initial_pos.get_y(), initial_pos.get_z(), true) *
                         an.S(0.05, 0.05, 0.05, true);
 
-    this->car.set_file_name("models/car.obj");
+    this->car.set_file_name("models/car2.obj");
     this->car.set_transform(this->transform);
     this->car.set_color(1.0, 1.0, 1.0);
     this->car_data.set_data(this->car.get_vertex_buffer_data(), this->car.get_vertex_color_data());

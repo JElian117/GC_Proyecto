@@ -20,12 +20,12 @@ Obstacle::Obstacle (Vertex inital_pos, GLuint programID){
     this->transform =   an.T(initial_pos.get_x(), initial_pos.get_y(), initial_pos.get_z(), true) *
                         an.S(0.05, 0.05, 0.05, true);
 
-    this->person.set_file_name("models/person.obj");
+    this->person.set_file_name("models/person2.obj");
     this->person.set_transform(this->transform);
     this->person.set_color(0.0, 0.0, 1.0);
     this->person_data.set_data(this->person.get_vertex_buffer_data(), this->person.get_vertex_color_data());
 
-    this->cactus.set_file_name("models/cactus.ply");
+    this->cactus.set_file_name("models/cactus2.ply");
     this->cactus.set_transform(this->transform);
     this->cactus.set_color(1.0, 0.0, 0.0);
     this->cactus_data.set_data(this->cactus.get_vertex_buffer_data(), this->cactus.get_vertex_color_data());
@@ -39,8 +39,8 @@ Obstacle::Obstacle (Vertex inital_pos, GLuint programID){
     );
     //this->projection = glm::perspective(
     //    glm::radians(45.0f), // The vertical Field of View
-    //    (float)1000 / (float)600, // Aspect Ratio
-    //    0.1f, // Near clipping plane
+    //    1024.0f/768.0f // Aspect Ratio
+    //    0.6f, // Near clipping plane
     //    100.0f // Far clipping plane
     //); 
     this->projection = glm::ortho(
@@ -84,7 +84,7 @@ void Obstacle::set_view(unsigned int key){
         this->view = glm::lookAt(
             glm::vec3(0, 0, 5), // Camera is at (0,5,0), in World Space
             glm::vec3(0, 0, 0), // and looks at the origin
-            glm::vec3(0, -11, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+            glm::vec3(0, -1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
         );
     }
     else if(key == 4){
