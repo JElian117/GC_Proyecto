@@ -54,7 +54,11 @@ void Ply::load(string file_name){
                 float x = stof(elems[0]);
                 float y = stof(elems[1]);
                 float z = stof(elems[2]);
+                float nx = stof(elems[3]);
+                float ny = stof(elems[4]);
+                float nz = stof(elems[5]);
                 vertices.push_back(Vertex(x, y, z));
+                nvertices.push_back(Vertex(nx, ny, nz));
                 num_vertices--;
         } else if (num_faces > 0) {
             vector<unsigned int> vs;

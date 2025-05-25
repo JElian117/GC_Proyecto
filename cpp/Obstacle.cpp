@@ -20,12 +20,12 @@ Obstacle::Obstacle (Vertex inital_pos, GLuint programID){
     this->transform =   an.T(initial_pos.get_x(), initial_pos.get_y(), initial_pos.get_z(), true) *
                         an.S(0.05, 0.05, 0.05, true);
 
-    this->person.set_file_name("models/person2.obj");
+    this->person.set_file_name("models/person.obj");
     this->person.set_transform(this->transform);
     this->person.set_color(0.0, 0.0, 1.0);
     this->person_data.set_data(this->person.get_vertex_buffer_data(), this->person.get_vertex_color_data());
 
-    this->cactus.set_file_name("models/cactus2.ply");
+    this->cactus.set_file_name("models/cactus.ply");
     this->cactus.set_transform(this->transform);
     this->cactus.set_color(1.0, 0.0, 0.0);
     this->cactus_data.set_data(this->cactus.get_vertex_buffer_data(), this->cactus.get_vertex_color_data());

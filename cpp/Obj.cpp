@@ -52,6 +52,12 @@ void Obj::load(string file_name){
                 float z = stof(elements[3]);
                 vertices.push_back(Vertex(x, y, z));
             }
+            if (elements[0] == "vn" && elements.size() >= 4) {
+                float a = stof(elements[1]);
+                float b = stof(elements[2]);
+                float c = stof(elements[3]);
+                nvertices.push_back(Vertex(a, b, c));
+            }
             if (elements[0] == "f") {
                 vector<unsigned int> vs = {};
                 for (unsigned int i = 1; i < elements.size(); i++) {

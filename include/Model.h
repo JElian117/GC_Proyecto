@@ -30,6 +30,7 @@ public:
 
 protected:
     vector<Vertex> vertices;
+    vector<Vertex> nvertices;
     vector<Face> faces;
     vector<string> split(const string& str, const char& delim);
     virtual void load(string file_name) = 0;
