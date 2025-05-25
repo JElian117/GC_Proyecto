@@ -5,4 +5,4 @@ Este proyecto consiste en un demo donde un vehículo evita obstáculos en su cam
 
 ### Video:
 ```markdown
-[![Ver video](https://img.youtube.com/vi/hZ19kBN6b4Y/0.jpg)](https://www.youtube.com/watch?v=hZ19kBN6b4Y)
+(https://www.youtube.com/watch?v=hZ19kBN6b4Y)
