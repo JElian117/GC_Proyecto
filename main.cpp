@@ -9,7 +9,7 @@ using namespace std;
 int main(){
     OpenGL gl = OpenGL();
     
-    GLFWwindow *window = gl.createWindow(1000, 600, "Carro y Obstaculo");
+    GLFWwindow *window = gl.createWindow(800, 600, "Carro y Obstaculo");
     if( window == NULL )
     return -1;
     
@@ -24,6 +24,11 @@ int main(){
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
+    // Variables para control de teclas
+    bool release_up = true, release_down = true;
+    bool release_left = true, release_right = true;
+    bool release_space = true, release_r = true;
+
     do {
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -32,6 +37,59 @@ int main(){
 
         glfwSwapBuffers(window);
 		glfwPollEvents();
+
+        // Controles del carro
+        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS && release_up) {
+            release_up = false;
+            car.set_speed(0.1f);
+            car.update_position();
+        }
+        if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_RELEASE) {
+            release_up = true;
+        }
+
+        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS && release_down) {
+            release_down = false;
+            car.set_speed(-0.025f);
+            car.update_position();
+        }
+        if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_RELEASE) {
+            release_down = true;
+        }
+
+        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS && release_left) {
+            release_left = false;
+            car.set_steering(5.0f);
+            if(car.get_speed() > 0) car.update_position();
+        }
+        if(glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_RELEASE) {
+            release_left = true;
+        }
+
+        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS && release_right) {
+            release_right = false;
+            car.set_steering(-5.0f);
+            if(car.get_speed() > 0) car.update_position();
+        }
+        if(glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_RELEASE) {
+            release_right = true;
+        }
+
+        if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && release_space) {
+            release_space = false;
+            car.set_speed(-1.0f); // Frenar
+        }
+        if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
+            release_space = true;
+        }
+
+        if(glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS && release_r) {
+            release_r = false;
+            car.reset();
+        }
+        if(glfwGetKey(window, GLFW_KEY_R) == GLFW_RELEASE) {
+            release_r = true;
+        }
 
         // Cambiar la vista del carro y el obstáculo.
         if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS){
