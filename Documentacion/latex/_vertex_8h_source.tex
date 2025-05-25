@@ -1,0 +1,43 @@
+\doxysection{Vertex.\+h}
+\hypertarget{_vertex_8h_source}{}\label{_vertex_8h_source}\index{C:/Users/padro/GCProyectos/06.proyecto/include/Vertex.h@{C:/Users/padro/GCProyectos/06.proyecto/include/Vertex.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VERTEX\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VERTEX\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <armadillo>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ \textcolor{comment}{//Definición\ de\ la\ clase}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{float}\ x,\ y,\ z;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_abc2531c8f9b2eed32478f4fba4603e88}{print}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ \mbox{\hyperlink{class_vertex_afc9a06d5398c52347d17834404a7998c}{operator-\/}}(\mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ op2);}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ \mbox{\hyperlink{class_vertex_a34f20018d040c8c27b83507675b8f25e}{operator*}}(\textcolor{keywordtype}{float}\ op2);}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ \mbox{\hyperlink{class_vertex_ae69ff4c56d76cf5d72c2492053421f32}{operator+}}(\mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}\ op2);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Hay\ un\ destructor\ de\ la\ clase\ \string~Vertex();\ pero\ al\ menos\ por\ el\ momento\ no\ lo\ necesitamos\ y\ por\ lo\ tanto\ no\ lo\ vamos\ a\ implementar}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vertex_a26041a00642b3c188e0e269985a731ba}{get\_x}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vertex_af398ad346a54ce99806c64f599027e26}{get\_y}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_vertex_a620e5548290732ff9573bdc2db9e196c}{get\_z}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a9985b7905ed9922558faf0210a51bac1}{set\_x}}(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_a2b6160c9fae288d6af34cde1eb5f127b}{set\_y}}(\textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_adb54df6fc47cd62b5122e99b218920cd}{set\_z}}(\textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vertex_af1143a924f0aaf2c5e22ee80c59cf1e1}{octant}}();}
+\DoxyCodeLine{00037\ \ \ \ \ arma::Col<float>\ \mbox{\hyperlink{class_vertex_ac5800ee07ad8686b8ae6d270e5039bca}{h}}();}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

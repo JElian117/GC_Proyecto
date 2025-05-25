@@ -1,0 +1,64 @@
+\doxysection{Car.\+h}
+\hypertarget{_car_8h_source}{}\label{_car_8h_source}\index{C:/Users/padro/GCProyectos/06.proyecto/include/Car.h@{C:/Users/padro/GCProyectos/06.proyecto/include/Car.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CAR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CAR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Vertex.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Animation.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <armadillo>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Obj.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Ply.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Triangle.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <glm/glm.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_car_aaa24af3269140bc7ee97bed963218f27}{Car}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_car_aaa24af3269140bc7ee97bed963218f27}{Car}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ initial\_pos,\ GLuint\ programID);}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_aa8547c138a1453701b705591125b4af4}{draw}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_ab4814354167e09f4c7440c7191f36a80}{set\_view}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ key);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a5a00ba79b390b7e4d9015b0776fb0584}{set\_projection}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ key);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Métodos\ para\ simular\ el\ movimiento\ del\ carro}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a0087cc102118a858965c4485637f49b5}{set\_speed}}(\textcolor{keywordtype}{float}\ inc);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_ac1e38676fd423a7f526caa5b9056694e}{set\_steering}}(\textcolor{keywordtype}{float}\ inc);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_ae851ce4dda8cc5e82a2acd2b01fc4dcf}{update\_position}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_car_aa7d28520f165607baee44a719fd5a5e8}{get\_speed}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_car_a72b7fb505b22f5764807f8d624c7fbc4}{reset}}();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ initial\_pos;}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ current\_pos;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ speed;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ steering\_angle;\ \textcolor{comment}{//\ Ángulo\ de\ dirección}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_obj}{Obj}}\ car;}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_triangle}{Triangle}}\ car\_data;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ glm::mat4\ transform;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ E1,\ E2;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ GLuint\ programID;}
+\DoxyCodeLine{00048\ \ \ \ \ glm::mat4\ view;}
+\DoxyCodeLine{00049\ \ \ \ \ glm::mat4\ projection;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Para\ la\ animación\ de\ movimiento}}
+\DoxyCodeLine{00052\ \ \ \ \ vector<Vertex>\ trajectory;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_moving;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ move\_index;}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Ejes\ para\ rotación}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ rotation\_axis\_p1;}
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_vertex}{Vertex}}\ rotation\_axis\_p2;}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

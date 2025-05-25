@@ -1,0 +1,145 @@
+\doxysection{Car Class Reference}
+\hypertarget{class_car}{}\label{class_car}\index{Car@{Car}}
+
+
+Esta clase es usada para crear y dibujar un objeto \doxylink{class_car}{Car}, para manejar el view (POV) de la escena, manejar la proyección y proporcionar los métodos necesarios para simular el movimiento del carro que son setters para la velocidad y dirección en cuestión de manejo del volante, un método para actualizar la posición del carro y un getter de la velocidad del carro. Clase \doxylink{class_car}{Car}\+:\+: \doxylink{class_car}{Car} object.  
+
+
+
+
+{\ttfamily \#include $<$Car.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_car_aaa24af3269140bc7ee97bed963218f27}{Car}} (\mbox{\hyperlink{class_vertex}{Vertex}} initial\+\_\+pos, GLuint program\+ID)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_car}{Car}\+:\+: \doxylink{class_car}{Car} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_car_aa8547c138a1453701b705591125b4af4}\label{class_car_aa8547c138a1453701b705591125b4af4} 
+void {\bfseries draw} ()
+\begin{DoxyCompactList}\small\item\em Método que dibuja el objeto \doxylink{class_car}{Car}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_ab4814354167e09f4c7440c7191f36a80}{set\+\_\+view}} (unsigned int key)
+\begin{DoxyCompactList}\small\item\em Método que establece la vista de la cámara. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a5a00ba79b390b7e4d9015b0776fb0584}{set\+\_\+projection}} (unsigned int key)
+\begin{DoxyCompactList}\small\item\em Método que establece la proyección de la cámara. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_a0087cc102118a858965c4485637f49b5}{set\+\_\+speed}} (float inc)
+\begin{DoxyCompactList}\small\item\em Método que establece la velocidad del carro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_car_ac1e38676fd423a7f526caa5b9056694e}{set\+\_\+steering}} (float inc)
+\begin{DoxyCompactList}\small\item\em Método que establece el ángulo de dirección del carro. \end{DoxyCompactList}\item 
+\Hypertarget{class_car_ae851ce4dda8cc5e82a2acd2b01fc4dcf}\label{class_car_ae851ce4dda8cc5e82a2acd2b01fc4dcf} 
+void {\bfseries update\+\_\+position} ()
+\begin{DoxyCompactList}\small\item\em Método que actualiza la posición del carro según su velocidad y ángulo de dirección. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_car_aa7d28520f165607baee44a719fd5a5e8}{get\+\_\+speed}} ()
+\begin{DoxyCompactList}\small\item\em Método que obtiene la velocidad actual del carro. \end{DoxyCompactList}\item 
+\Hypertarget{class_car_a72b7fb505b22f5764807f8d624c7fbc4}\label{class_car_a72b7fb505b22f5764807f8d624c7fbc4} 
+void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Método que resetea el estado del carro a su posición inicial y velocidad predeterminada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear y dibujar un objeto \doxylink{class_car}{Car}, para manejar el view (POV) de la escena, manejar la proyección y proporcionar los métodos necesarios para simular el movimiento del carro que son setters para la velocidad y dirección en cuestión de manejo del volante, un método para actualizar la posición del carro y un getter de la velocidad del carro. Clase \doxylink{class_car}{Car}\+:\+: \doxylink{class_car}{Car} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_car_aaa24af3269140bc7ee97bed963218f27}\index{Car@{Car}!Car@{Car}}
+\index{Car@{Car}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{Car()}{Car()}}
+{\footnotesize\ttfamily \label{class_car_aaa24af3269140bc7ee97bed963218f27} 
+Car\+::\+Car (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{inital\+\_\+pos}{, }\item[{GLuint}]{program\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_car}{Car}\+:\+: \doxylink{class_car}{Car} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & initial\+\_\+pos Posición inicial del objeto \\
+\hline
+{\em GLuint} & program\+ID ID del programa de shader \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_car_aa7d28520f165607baee44a719fd5a5e8}\index{Car@{Car}!get\_speed@{get\_speed}}
+\index{get\_speed@{get\_speed}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{get\_speed()}{get\_speed()}}
+{\footnotesize\ttfamily \label{class_car_aa7d28520f165607baee44a719fd5a5e8} 
+float Car\+::get\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que obtiene la velocidad actual del carro. 
+
+\begin{DoxyReturn}{Returns}
+float Velocidad actual del carro 
+\end{DoxyReturn}
+\Hypertarget{class_car_a5a00ba79b390b7e4d9015b0776fb0584}\index{Car@{Car}!set\_projection@{set\_projection}}
+\index{set\_projection@{set\_projection}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{set\_projection()}{set\_projection()}}
+{\footnotesize\ttfamily \label{class_car_a5a00ba79b390b7e4d9015b0776fb0584} 
+void Car\+::set\+\_\+projection (\begin{DoxyParamCaption}\item[{unsigned int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece la proyección de la cámara. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int key Tecla para cambiar la proyección \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_car_a0087cc102118a858965c4485637f49b5}\index{Car@{Car}!set\_speed@{set\_speed}}
+\index{set\_speed@{set\_speed}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{set\_speed()}{set\_speed()}}
+{\footnotesize\ttfamily \label{class_car_a0087cc102118a858965c4485637f49b5} 
+void Car\+::set\+\_\+speed (\begin{DoxyParamCaption}\item[{float}]{inc}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece la velocidad del carro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & inc Incremento o decremento de velocidad (positivo para acelerar, negativo para frenar) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_car_ac1e38676fd423a7f526caa5b9056694e}\index{Car@{Car}!set\_steering@{set\_steering}}
+\index{set\_steering@{set\_steering}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{set\_steering()}{set\_steering()}}
+{\footnotesize\ttfamily \label{class_car_ac1e38676fd423a7f526caa5b9056694e} 
+void Car\+::set\+\_\+steering (\begin{DoxyParamCaption}\item[{float}]{inc}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece el ángulo de dirección del carro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & inc Incremento o decremento del ángulo de dirección (desde la perspectiva del carro\+: positivo para girar a la izquierda, negativo para girar a la derecha) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_car_ab4814354167e09f4c7440c7191f36a80}\index{Car@{Car}!set\_view@{set\_view}}
+\index{set\_view@{set\_view}!Car@{Car}}
+\doxysubsubsection{\texorpdfstring{set\_view()}{set\_view()}}
+{\footnotesize\ttfamily \label{class_car_ab4814354167e09f4c7440c7191f36a80} 
+void Car\+::set\+\_\+view (\begin{DoxyParamCaption}\item[{unsigned int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece la vista de la cámara. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int key Tecla para cambiar la vista \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Car.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Car.\+cpp\end{DoxyCompactItemize}

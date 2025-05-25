@@ -1,0 +1,43 @@
+\doxysection{Animation.\+h}
+\hypertarget{_animation_8h_source}{}\label{_animation_8h_source}\index{C:/Users/padro/GCProyectos/06.proyecto/include/Animation.h@{C:/Users/padro/GCProyectos/06.proyecto/include/Animation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ANIMATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ANIMATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Vertex.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <armadillo>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <glm/gtc/matrix\_transform.hpp>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}}\{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_animation_a83f0a16cef7117f187ad596de38dd9d6}{Animation}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ vector<Vertex>\ \mbox{\hyperlink{class_animation_a5e4ee79343fe7059d2549879bff48ca5}{move\_line}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ P1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P2,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00022\ \ \ \ \ vector<Vertex>\ \mbox{\hyperlink{class_animation_a2d5a27f18eb52cecf13c4523beb9a587}{move\_hermite}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ P1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P4,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ R1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ R4,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00023\ \ \ \ \ vector<Vertex>\ \mbox{\hyperlink{class_animation_a74147e8e9ad148da2d4bd69ee293b2bb}{move\_bezier}}(\mbox{\hyperlink{class_vertex}{Vertex}}\ P1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P2,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P3,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P4,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_a6a1d52649fa76094a4effc3b07415984}{T}}(\textcolor{keywordtype}{float}\ dx,\textcolor{keywordtype}{float}\ dy,\ \textcolor{keywordtype}{float}\ dz);}
+\DoxyCodeLine{00026\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_abb5c3da73289e59bbd0684e0ec507acd}{S}}(\textcolor{keywordtype}{float}\ sx,\textcolor{keywordtype}{float}\ sy,\ \textcolor{keywordtype}{float}\ sz);}
+\DoxyCodeLine{00027\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_add8d1ba6d52d552be115fb97758bc14a}{Rx}}(\textcolor{keywordtype}{float}\ theta);}
+\DoxyCodeLine{00028\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_a7957ecf8c1cac11af125e6f93ba01bea}{Ry}}(\textcolor{keywordtype}{float}\ theta);}
+\DoxyCodeLine{00029\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_a0115c846d13f3b7c76d794427936b71c}{Rz}}(\textcolor{keywordtype}{float}\ theta);}
+\DoxyCodeLine{00030\ \ \ \ \ arma::Mat<float>\ \mbox{\hyperlink{class_animation_a1980f76aaedcd32a78c7880921d26461}{Rp1p2}}(\textcolor{keywordtype}{float}\ theta,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P2);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_a6a1d52649fa76094a4effc3b07415984}{T}}(\textcolor{keywordtype}{float}\ dx,\textcolor{keywordtype}{float}\ dy,\ \textcolor{keywordtype}{float}\ dz,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00033\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_abb5c3da73289e59bbd0684e0ec507acd}{S}}(\textcolor{keywordtype}{float}\ sx,\textcolor{keywordtype}{float}\ sy,\ \textcolor{keywordtype}{float}\ sz,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00034\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_add8d1ba6d52d552be115fb97758bc14a}{Rx}}(\textcolor{keywordtype}{float}\ theta,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00035\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_a7957ecf8c1cac11af125e6f93ba01bea}{Ry}}(\textcolor{keywordtype}{float}\ theta,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00036\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_a0115c846d13f3b7c76d794427936b71c}{Rz}}(\textcolor{keywordtype}{float}\ theta,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00037\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_animation_a1980f76aaedcd32a78c7880921d26461}{Rp1p2}}(\textcolor{keywordtype}{float}\ theta,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P1,\ \mbox{\hyperlink{class_vertex}{Vertex}}\ P2,\ \textcolor{keywordtype}{bool}\ t);}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,198 @@
+\doxysection{Model Class Reference}
+\hypertarget{class_model}{}\label{class_model}\index{Model@{Model}}
+
+
+Esta clase es usada para crear modelos usando \doxylink{class_obj}{Obj} y \doxylink{class_ply}{Ply}. Clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object.  
+
+
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+Inheritance diagram for Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_a555e27949c7a209f607d77e5d57c1599}{Model}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_model_ae3b375de5f6df4faf74a95d64748e048}\label{class_model_ae3b375de5f6df4faf74a95d64748e048} 
+{\bfseries Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_model_a3a2166e88c51b24bccd1106053e33652}\label{class_model_a3a2166e88c51b24bccd1106053e33652} 
+void {\bfseries print} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime los vértices del objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a439bb91d356e6fd954eefddaf5c9f1db}{set\+\_\+transform}} (glm\+::mat4 transform)
+\begin{DoxyCompactList}\small\item\em Método setter que establece la matriz de transformación. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92}{get\+\_\+transform}} ()
+\begin{DoxyCompactList}\small\item\em Método getter que regresa la matriz de transformación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_af54fb319dfb35eac0d8a8097e8d2e43f}{set\+\_\+color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Método setter que establece el color del objeto. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a7cf1c491a0837409a848e80587fc1ac6}{get\+\_\+vertex\+\_\+buffer\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los vértices. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a0e79f9a93758c70178b4a91996a93df6}{get\+\_\+vertex\+\_\+color\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los colores de los vértices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_model_a7ca6ef39e0bdf0583a3826f7452a077a}{split}} (const string \&str, const char \&delim)
+\begin{DoxyCompactList}\small\item\em Método que carga el archivo. \end{DoxyCompactList}\item 
+\Hypertarget{class_model_a77beddc981ffc71b7f2ce6c2449a08bd}\label{class_model_a77beddc981ffc71b7f2ce6c2449a08bd} 
+virtual void {\bfseries load} (string file\+\_\+name)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_abdb2061ed86c51bbf1acf4e3c3a0406d}\label{class_model_abdb2061ed86c51bbf1acf4e3c3a0406d} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries vertices}
+\item 
+\Hypertarget{class_model_a7f2aebc074efca809a7630df37a9c61e}\label{class_model_a7f2aebc074efca809a7630df37a9c61e} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries nvertices}
+\item 
+\Hypertarget{class_model_ade22322d4ab111437d28dcffd314e509}\label{class_model_ade22322d4ab111437d28dcffd314e509} 
+vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ {\bfseries faces}
+\item 
+\Hypertarget{class_model_ab700d3ab458a1846371c3ad19c276e13}\label{class_model_ab700d3ab458a1846371c3ad19c276e13} 
+glm\+::mat4 {\bfseries model}
+\item 
+\Hypertarget{class_model_aa059c23ea51236e5b3fde12ba227a2c4}\label{class_model_aa059c23ea51236e5b3fde12ba227a2c4} 
+float {\bfseries r}
+\item 
+\Hypertarget{class_model_a8c98961b9508c88a8a1ed9d227c6a45d}\label{class_model_a8c98961b9508c88a8a1ed9d227c6a45d} 
+float {\bfseries g}
+\item 
+\Hypertarget{class_model_ae60bc45824cde0463c2ae5ca9102ab3e}\label{class_model_ae60bc45824cde0463c2ae5ca9102ab3e} 
+float {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear modelos usando \doxylink{class_obj}{Obj} y \doxylink{class_ply}{Ply}. Clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_model_a555e27949c7a209f607d77e5d57c1599}\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily \label{class_model_a555e27949c7a209f607d77e5d57c1599} 
+Model\+::\+Model (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92}\index{Model@{Model}!get\_transform@{get\_transform}}
+\index{get\_transform@{get\_transform}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{get\_transform()}{get\_transform()}}
+{\footnotesize\ttfamily \label{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92} 
+glm\+::mat4 Model\+::get\+\_\+transform (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método getter que regresa la matriz de transformación. 
+
+\begin{DoxyReturn}{Returns}
+glm\+::mat4 Matriz de transformación 
+\end{DoxyReturn}
+\Hypertarget{class_model_a7cf1c491a0837409a848e80587fc1ac6}\index{Model@{Model}!get\_vertex\_buffer\_data@{get\_vertex\_buffer\_data}}
+\index{get\_vertex\_buffer\_data@{get\_vertex\_buffer\_data}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{get\_vertex\_buffer\_data()}{get\_vertex\_buffer\_data()}}
+{\footnotesize\ttfamily \label{class_model_a7cf1c491a0837409a848e80587fc1ac6} 
+vector$<$ GLfloat $>$ Model\+::get\+\_\+vertex\+\_\+buffer\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que regresa los datos de los vértices. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+GLfloat$>$ Datos de los vértices 
+\end{DoxyReturn}
+\Hypertarget{class_model_a0e79f9a93758c70178b4a91996a93df6}\index{Model@{Model}!get\_vertex\_color\_data@{get\_vertex\_color\_data}}
+\index{get\_vertex\_color\_data@{get\_vertex\_color\_data}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{get\_vertex\_color\_data()}{get\_vertex\_color\_data()}}
+{\footnotesize\ttfamily \label{class_model_a0e79f9a93758c70178b4a91996a93df6} 
+vector$<$ GLfloat $>$ Model\+::get\+\_\+vertex\+\_\+color\+\_\+data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que regresa los datos de los colores de los vértices. 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+GLfloat$>$ Datos de los colores de los vértices 
+\end{DoxyReturn}
+\Hypertarget{class_model_af54fb319dfb35eac0d8a8097e8d2e43f}\index{Model@{Model}!set\_color@{set\_color}}
+\index{set\_color@{set\_color}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{set\_color()}{set\_color()}}
+{\footnotesize\ttfamily \label{class_model_af54fb319dfb35eac0d8a8097e8d2e43f} 
+void Model\+::set\+\_\+color (\begin{DoxyParamCaption}\item[{float}]{r}{, }\item[{float}]{g}{, }\item[{float}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Método setter que establece el color del objeto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & r Componente roja \\
+\hline
+{\em float} & g Componente verde \\
+\hline
+{\em float} & b Componente azul \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_a439bb91d356e6fd954eefddaf5c9f1db}\index{Model@{Model}!set\_transform@{set\_transform}}
+\index{set\_transform@{set\_transform}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{set\_transform()}{set\_transform()}}
+{\footnotesize\ttfamily \label{class_model_a439bb91d356e6fd954eefddaf5c9f1db} 
+void Model\+::set\+\_\+transform (\begin{DoxyParamCaption}\item[{glm\+::mat4}]{transform}{}\end{DoxyParamCaption})}
+
+
+
+Método setter que establece la matriz de transformación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em glm\+::mat4} & transform Matriz de transformación \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_a7ca6ef39e0bdf0583a3826f7452a077a}\index{Model@{Model}!split@{split}}
+\index{split@{split}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \label{class_model_a7ca6ef39e0bdf0583a3826f7452a077a} 
+vector$<$ string $>$ Model\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{org\+\_\+str}{, }\item[{const char \&}]{delim}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Método que carga el archivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+{\em delim} & Delimitador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$string$>$ Vértices del objeto 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Model.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Model.\+cpp\end{DoxyCompactItemize}

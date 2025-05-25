@@ -1,0 +1,95 @@
+\doxysection{Open\+GL Class Reference}
+\hypertarget{class_open_g_l}{}\label{class_open_g_l}\index{OpenGL@{OpenGL}}
+
+
+Esta clase es usada para crear la ventana y cargar los shaders. Clase \doxylink{class_open_g_l}{Open\+GL}\+:\+: \doxylink{class_open_g_l}{Open\+GL} object.  
+
+
+
+
+{\ttfamily \#include $<$Open\+GL.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_open_g_l_a6d1a64d0e8fd9bc0120d003b4ffa9140}\label{class_open_g_l_a6d1a64d0e8fd9bc0120d003b4ffa9140} 
+{\bfseries Open\+GL} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_open_g_l}{Open\+GL}\+:\+: \doxylink{class_open_g_l}{Open\+GL} object. \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_open_g_l_a1a09abe8b7a1075baf9b8f21f0a0f43a}{create\+Window}} (long width, long height, std\+::string title)
+\begin{DoxyCompactList}\small\item\em Método que crea la ventana y carga los shaders. \end{DoxyCompactList}\item 
+GLuint \mbox{\hyperlink{class_open_g_l_a223dc8b2e5faf362371912a4f2221d5b}{load\+Shaders}} (const char \texorpdfstring{$\ast$}{*}vertex\+\_\+file\+\_\+path, const char \texorpdfstring{$\ast$}{*}fragment\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Método que carga los shaders. \end{DoxyCompactList}\item 
+GLuint \mbox{\hyperlink{class_open_g_l_a39d87020db31c36e3efb53c42f70cfde}{get\+Program\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa el ID del programa de shaders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear la ventana y cargar los shaders. Clase \doxylink{class_open_g_l}{Open\+GL}\+:\+: \doxylink{class_open_g_l}{Open\+GL} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_open_g_l_a1a09abe8b7a1075baf9b8f21f0a0f43a}\index{OpenGL@{OpenGL}!createWindow@{createWindow}}
+\index{createWindow@{createWindow}!OpenGL@{OpenGL}}
+\doxysubsubsection{\texorpdfstring{createWindow()}{createWindow()}}
+{\footnotesize\ttfamily \label{class_open_g_l_a1a09abe8b7a1075baf9b8f21f0a0f43a} 
+GLFWwindow \texorpdfstring{$\ast$}{*} Open\+GL\+::create\+Window (\begin{DoxyParamCaption}\item[{long}]{width}{, }\item[{long}]{height}{, }\item[{std\+::string}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Método que crea la ventana y carga los shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long} & width Ancho de la ventana \\
+\hline
+{\em long} & height Alto de la ventana \\
+\hline
+{\em std\+::string} & title Título de la ventana \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GLFWwindow\texorpdfstring{$\ast$}{*} Ventana creada 
+\end{DoxyReturn}
+\Hypertarget{class_open_g_l_a39d87020db31c36e3efb53c42f70cfde}\index{OpenGL@{OpenGL}!getProgramID@{getProgramID}}
+\index{getProgramID@{getProgramID}!OpenGL@{OpenGL}}
+\doxysubsubsection{\texorpdfstring{getProgramID()}{getProgramID()}}
+{\footnotesize\ttfamily \label{class_open_g_l_a39d87020db31c36e3efb53c42f70cfde} 
+GLuint Open\+GL\+::get\+Program\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Método que regresa el ID del programa de shaders. 
+
+\begin{DoxyReturn}{Returns}
+GLuint ID del programa de shaders 
+\end{DoxyReturn}
+\Hypertarget{class_open_g_l_a223dc8b2e5faf362371912a4f2221d5b}\index{OpenGL@{OpenGL}!loadShaders@{loadShaders}}
+\index{loadShaders@{loadShaders}!OpenGL@{OpenGL}}
+\doxysubsubsection{\texorpdfstring{loadShaders()}{loadShaders()}}
+{\footnotesize\ttfamily \label{class_open_g_l_a223dc8b2e5faf362371912a4f2221d5b} 
+GLuint Open\+GL\+::load\+Shaders (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{vertex\+\_\+file\+\_\+path}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fragment\+\_\+file\+\_\+path}{}\end{DoxyParamCaption})}
+
+
+
+Método que carga los shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char\texorpdfstring{$\ast$}{*} vertex\+\_\+file\+\_\+path Ruta del archivo del shader de vértices \\
+\hline
+{\em const} & char\texorpdfstring{$\ast$}{*} fragment\+\_\+file\+\_\+path Ruta del archivo del shader de fragmentos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GLuint ID del programa de shaders 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Open\+GL.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Open\+GL.\+cpp\end{DoxyCompactItemize}

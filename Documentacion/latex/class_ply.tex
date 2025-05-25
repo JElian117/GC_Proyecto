@@ -1,0 +1,119 @@
+\doxysection{Ply Class Reference}
+\hypertarget{class_ply}{}\label{class_ply}\index{Ply@{Ply}}
+
+
+Esta clase es usada para crear objetos usando un archivo ply. Clase \doxylink{class_ply}{Ply}\+:\+: \doxylink{class_ply}{Ply} object.  
+
+
+
+
+{\ttfamily \#include $<$Ply.\+h$>$}
+
+Inheritance diagram for Ply\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ply}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ply_aabad0f3234294e85eca8e40402462213}{Ply}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_ply}{Ply}\+:\+: \doxylink{class_ply}{Ply} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_ply_aab0ce270207c913b60c36d70d3159035}\label{class_ply_aab0ce270207c913b60c36d70d3159035} 
+{\bfseries Ply} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_ply}{Ply}\+:\+: \doxylink{class_ply}{Ply} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ply_a8c14692a9a0904016206b6b2ca37a1fe}{set\+\_\+file\+\_\+name}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Método que establece el nombre del archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_a555e27949c7a209f607d77e5d57c1599}{Model}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+{\bfseries Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+void {\bfseries print} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime los vértices del objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a439bb91d356e6fd954eefddaf5c9f1db}{set\+\_\+transform}} (glm\+::mat4 transform)
+\begin{DoxyCompactList}\small\item\em Método setter que establece la matriz de transformación. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92}{get\+\_\+transform}} ()
+\begin{DoxyCompactList}\small\item\em Método getter que regresa la matriz de transformación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_af54fb319dfb35eac0d8a8097e8d2e43f}{set\+\_\+color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Método setter que establece el color del objeto. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a7cf1c491a0837409a848e80587fc1ac6}{get\+\_\+vertex\+\_\+buffer\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los vértices. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a0e79f9a93758c70178b4a91996a93df6}{get\+\_\+vertex\+\_\+color\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los colores de los vértices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_model_a7ca6ef39e0bdf0583a3826f7452a077a}{split}} (const string \&str, const char \&delim)
+\begin{DoxyCompactList}\small\item\em Método que carga el archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries vertices}
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries nvertices}
+\item 
+vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ {\bfseries faces}
+\item 
+glm\+::mat4 {\bfseries model}
+\item 
+float {\bfseries r}
+\item 
+float {\bfseries g}
+\item 
+float {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear objetos usando un archivo ply. Clase \doxylink{class_ply}{Ply}\+:\+: \doxylink{class_ply}{Ply} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ply_aabad0f3234294e85eca8e40402462213}\index{Ply@{Ply}!Ply@{Ply}}
+\index{Ply@{Ply}!Ply@{Ply}}
+\doxysubsubsection{\texorpdfstring{Ply()}{Ply()}}
+{\footnotesize\ttfamily \label{class_ply_aabad0f3234294e85eca8e40402462213} 
+Ply\+::\+Ply (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_ply}{Ply}\+:\+: \doxylink{class_ply}{Ply} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ply_a8c14692a9a0904016206b6b2ca37a1fe}\index{Ply@{Ply}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!Ply@{Ply}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}}
+{\footnotesize\ttfamily \label{class_ply_a8c14692a9a0904016206b6b2ca37a1fe} 
+void Ply\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece el nombre del archivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Ply.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Ply.\+cpp\end{DoxyCompactItemize}

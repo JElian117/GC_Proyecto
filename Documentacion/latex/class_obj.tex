@@ -1,0 +1,119 @@
+\doxysection{Obj Class Reference}
+\hypertarget{class_obj}{}\label{class_obj}\index{Obj@{Obj}}
+
+
+Esta clase es usada para crear objetos usando un archivo obj. Clase \doxylink{class_obj}{Obj}\+:\+: \doxylink{class_obj}{Obj} object.  
+
+
+
+
+{\ttfamily \#include $<$Obj.\+h$>$}
+
+Inheritance diagram for Obj\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_obj}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_obj_a169515a68007ca2bcbe3b86b2608ac82}{Obj}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_obj}{Obj}\+:\+: \doxylink{class_obj}{Obj} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_obj_ae6d85a21719815c7bbb9cd68d609e0a0}\label{class_obj_ae6d85a21719815c7bbb9cd68d609e0a0} 
+{\bfseries Obj} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_obj}{Obj}\+:\+: \doxylink{class_obj}{Obj} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_obj_a0a8269fa1faf79574a1950409218a77c}{set\+\_\+file\+\_\+name}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Método que establece el nombre del archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_a555e27949c7a209f607d77e5d57c1599}{Model}} (string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+{\bfseries Model} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_model}{Model}\+:\+: \doxylink{class_model}{Model} object. \end{DoxyCompactList}\item 
+void {\bfseries print} ()
+\begin{DoxyCompactList}\small\item\em Método que imprime los vértices del objeto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a439bb91d356e6fd954eefddaf5c9f1db}{set\+\_\+transform}} (glm\+::mat4 transform)
+\begin{DoxyCompactList}\small\item\em Método setter que establece la matriz de transformación. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92}{get\+\_\+transform}} ()
+\begin{DoxyCompactList}\small\item\em Método getter que regresa la matriz de transformación. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_af54fb319dfb35eac0d8a8097e8d2e43f}{set\+\_\+color}} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em Método setter que establece el color del objeto. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a7cf1c491a0837409a848e80587fc1ac6}{get\+\_\+vertex\+\_\+buffer\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los vértices. \end{DoxyCompactList}\item 
+vector$<$ GLfloat $>$ \mbox{\hyperlink{class_model_a0e79f9a93758c70178b4a91996a93df6}{get\+\_\+vertex\+\_\+color\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Método que regresa los datos de los colores de los vértices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_model_a7ca6ef39e0bdf0583a3826f7452a077a}{split}} (const string \&str, const char \&delim)
+\begin{DoxyCompactList}\small\item\em Método que carga el archivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_model}{Model}}}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries vertices}
+\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ {\bfseries nvertices}
+\item 
+vector$<$ \mbox{\hyperlink{class_face}{Face}} $>$ {\bfseries faces}
+\item 
+glm\+::mat4 {\bfseries model}
+\item 
+float {\bfseries r}
+\item 
+float {\bfseries g}
+\item 
+float {\bfseries b}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear objetos usando un archivo obj. Clase \doxylink{class_obj}{Obj}\+:\+: \doxylink{class_obj}{Obj} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_obj_a169515a68007ca2bcbe3b86b2608ac82}\index{Obj@{Obj}!Obj@{Obj}}
+\index{Obj@{Obj}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{Obj()}{Obj()}}
+{\footnotesize\ttfamily \label{class_obj_a169515a68007ca2bcbe3b86b2608ac82} 
+Obj\+::\+Obj (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_obj}{Obj}\+:\+: \doxylink{class_obj}{Obj} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_obj_a0a8269fa1faf79574a1950409218a77c}\index{Obj@{Obj}!set\_file\_name@{set\_file\_name}}
+\index{set\_file\_name@{set\_file\_name}!Obj@{Obj}}
+\doxysubsubsection{\texorpdfstring{set\_file\_name()}{set\_file\_name()}}
+{\footnotesize\ttfamily \label{class_obj_a0a8269fa1faf79574a1950409218a77c} 
+void Obj\+::set\+\_\+file\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{file\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Método que establece el nombre del archivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & file\+\_\+name Nombre del archivo \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Obj.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Obj.\+cpp\end{DoxyCompactItemize}

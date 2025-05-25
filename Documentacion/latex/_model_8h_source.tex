@@ -1,0 +1,43 @@
+\doxysection{Model.\+h}
+\hypertarget{_model_8h_source}{}\label{_model_8h_source}\index{C:/Users/padro/GCProyectos/06.proyecto/include/Model.h@{C:/Users/padro/GCProyectos/06.proyecto/include/Model.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MODEL\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MODEL\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}Vertex.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Face.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Triangle.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_model_a555e27949c7a209f607d77e5d57c1599}{Model}}\{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_model_ae3b375de5f6df4faf74a95d64748e048}{Model}}(\textcolor{keywordtype}{string}\ file\_name);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_model_ae3b375de5f6df4faf74a95d64748e048}{Model}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_a3a2166e88c51b24bccd1106053e33652}{print}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_a439bb91d356e6fd954eefddaf5c9f1db}{set\_transform}}(glm::mat4\ transform);}
+\DoxyCodeLine{00026\ \ \ \ \ glm::mat4\ \mbox{\hyperlink{class_model_a22318ceb5f0e22e7e8fb0a76d330ca92}{get\_transform}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_model_af54fb319dfb35eac0d8a8097e8d2e43f}{set\_color}}(\textcolor{keywordtype}{float}\ r,\ \textcolor{keywordtype}{float}\ g,\ \textcolor{keywordtype}{float}\ b);}
+\DoxyCodeLine{00028\ \ \ \ \ vector<GLfloat>\ \mbox{\hyperlink{class_model_a7cf1c491a0837409a848e80587fc1ac6}{get\_vertex\_buffer\_data}}();}
+\DoxyCodeLine{00029\ \ \ \ \ vector<GLfloat>\ \mbox{\hyperlink{class_model_a0e79f9a93758c70178b4a91996a93df6}{get\_vertex\_color\_data}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ vector<Vertex>\ vertices;}
+\DoxyCodeLine{00033\ \ \ \ \ vector<Vertex>\ nvertices;}
+\DoxyCodeLine{00034\ \ \ \ \ vector<Face>\ faces;}
+\DoxyCodeLine{00035\ \ \ \ \ vector<string>\ \mbox{\hyperlink{class_model_a7ca6ef39e0bdf0583a3826f7452a077a}{split}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ str,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\&\ delim);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ load(\textcolor{keywordtype}{string}\ file\_name)\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ glm::mat4\ model;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ r,\ g,\ b;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

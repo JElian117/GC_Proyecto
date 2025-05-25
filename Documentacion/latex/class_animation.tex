@@ -1,0 +1,378 @@
+\doxysection{Animation Class Reference}
+\hypertarget{class_animation}{}\label{class_animation}\index{Animation@{Animation}}
+
+
+Esta clase es usada para crear animaciones usando las curvas de Hermite y Bézier. Clase \doxylink{class_animation}{Animation}\+:\+: \doxylink{class_animation}{Animation} object.  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animation_a83f0a16cef7117f187ad596de38dd9d6}\label{class_animation_a83f0a16cef7117f187ad596de38dd9d6} 
+{\bfseries Animation} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_animation}{Animation}\+:\+: \doxylink{class_animation}{Animation} object. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_a5e4ee79343fe7059d2549879bff48ca5}{move\+\_\+line}} (\mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P2, float dt)
+\begin{DoxyCompactList}\small\item\em Método que mueve una línea entre dos puntos P1 y P2. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_a2d5a27f18eb52cecf13c4523beb9a587}{move\+\_\+hermite}} (\mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P4, \mbox{\hyperlink{class_vertex}{Vertex}} R1, \mbox{\hyperlink{class_vertex}{Vertex}} R4, float dt)
+\begin{DoxyCompactList}\small\item\em Método que mueve una curva de Hermite entre dos puntos P1 y P4. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ \mbox{\hyperlink{class_animation_a74147e8e9ad148da2d4bd69ee293b2bb}{move\+\_\+bezier}} (\mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P2, \mbox{\hyperlink{class_vertex}{Vertex}} P3, \mbox{\hyperlink{class_vertex}{Vertex}} P4, float dt)
+\begin{DoxyCompactList}\small\item\em Método que mueve una curva de Bezier entre cuatro puntos P1, P2, P3 y P4. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a6a1d52649fa76094a4effc3b07415984}{T}} (float dx, float dy, float dz)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz traslación. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_abb5c3da73289e59bbd0684e0ec507acd}{S}} (float sx, float sy, float sz)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de escalamiento. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_add8d1ba6d52d552be115fb97758bc14a}{Rx}} (float theta)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje X. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a7957ecf8c1cac11af125e6f93ba01bea}{Ry}} (float theta)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje Y. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a0115c846d13f3b7c76d794427936b71c}{Rz}} (float theta)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje Z. \end{DoxyCompactList}\item 
+arma\+::\+Mat$<$ float $>$ \mbox{\hyperlink{class_animation_a1980f76aaedcd32a78c7880921d26461}{Rp1p2}} (float theta, \mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P2)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto a un eje definido por dos puntos P1 y P2. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_a7d1fe115a6b04bf50769e11855620f1b}{T}} (float dx, float dy, float dz, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz traslación usando glm. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_a141deb8d8d5157928a62631939b45dd5}{S}} (float sx, float sy, float sz, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de escalamiento usando glm. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_abeb2341bc0c5fce5f44db071198c6bd7}{Rx}} (float theta, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje X usando glm. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_abd1a5b9909568ba50d0f05eb0827f027}{Ry}} (float theta, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje Y usando glm. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_ad5f28832f692708a9856ff24c6305949}{Rz}} (float theta, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto al eje Z usando glm. \end{DoxyCompactList}\item 
+glm\+::mat4 \mbox{\hyperlink{class_animation_a5db23d8eba3dd5c3d63e9b4392e92300}{Rp1p2}} (float theta, \mbox{\hyperlink{class_vertex}{Vertex}} P1, \mbox{\hyperlink{class_vertex}{Vertex}} P2, bool t)
+\begin{DoxyCompactList}\small\item\em Este método regresa una matriz de rotación respecto a un eje definido por dos puntos P1 y P2 usando glm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase es usada para crear animaciones usando las curvas de Hermite y Bézier. Clase \doxylink{class_animation}{Animation}\+:\+: \doxylink{class_animation}{Animation} object. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_animation_a74147e8e9ad148da2d4bd69ee293b2bb}\index{Animation@{Animation}!move\_bezier@{move\_bezier}}
+\index{move\_bezier@{move\_bezier}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{move\_bezier()}{move\_bezier()}}
+{\footnotesize\ttfamily \label{class_animation_a74147e8e9ad148da2d4bd69ee293b2bb} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::move\+\_\+bezier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P2}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P3}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P4}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Método que mueve una curva de Bezier entre cuatro puntos P1, P2, P3 y P4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & P1 Primer punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P2 Segundo punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P3 Tercer punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P4 Cuarto punto \\
+\hline
+{\em float} & dt Delta diferencia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ de vértices que representan la curva de Bezier 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a2d5a27f18eb52cecf13c4523beb9a587}\index{Animation@{Animation}!move\_hermite@{move\_hermite}}
+\index{move\_hermite@{move\_hermite}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{move\_hermite()}{move\_hermite()}}
+{\footnotesize\ttfamily \label{class_animation_a2d5a27f18eb52cecf13c4523beb9a587} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::move\+\_\+hermite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P4}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{R1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{R4}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Método que mueve una curva de Hermite entre dos puntos P1 y P4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & P1 Primer punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P4 Segundo punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & R1 Primer vector tangente \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & R4 Segundo vector tangente \\
+\hline
+{\em float} & dt Delta diferencia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ de vértices que representan la curva de Hermite 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a5e4ee79343fe7059d2549879bff48ca5}\index{Animation@{Animation}!move\_line@{move\_line}}
+\index{move\_line@{move\_line}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{move\_line()}{move\_line()}}
+{\footnotesize\ttfamily \label{class_animation_a5e4ee79343fe7059d2549879bff48ca5} 
+vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $>$ Animation\+::move\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P2}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Método que mueve una línea entre dos puntos P1 y P2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{class_vertex}{Vertex}} & P1 Primer punto \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P2 Segundo punto \\
+\hline
+{\em float} & dt Delta diferencia \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector $<$\+Vertex$>$ de vértices que representan la línea 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a1980f76aaedcd32a78c7880921d26461}\index{Animation@{Animation}!Rp1p2@{Rp1p2}}
+\index{Rp1p2@{Rp1p2}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rp1p2()}{Rp1p2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_a1980f76aaedcd32a78c7880921d26461} 
+arma\+::\+Mat$<$ float $>$ Animation\+::\+Rp1p2 (\begin{DoxyParamCaption}\item[{float}]{theta}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P2}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto a un eje definido por dos puntos P1 y P2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a5db23d8eba3dd5c3d63e9b4392e92300}\index{Animation@{Animation}!Rp1p2@{Rp1p2}}
+\index{Rp1p2@{Rp1p2}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rp1p2()}{Rp1p2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_a5db23d8eba3dd5c3d63e9b4392e92300} 
+glm\+::mat4 Animation\+::\+Rp1p2 (\begin{DoxyParamCaption}\item[{float}]{theta}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P1}{, }\item[{\mbox{\hyperlink{class_vertex}{Vertex}}}]{P2}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto a un eje definido por dos puntos P1 y P2 usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P1 \\
+\hline
+{\em \doxylink{class_vertex}{Vertex}} & P2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_add8d1ba6d52d552be115fb97758bc14a}\index{Animation@{Animation}!Rx@{Rx}}
+\index{Rx@{Rx}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rx()}{Rx()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_add8d1ba6d52d552be115fb97758bc14a} 
+arma\+::\+Mat$<$ float $>$ Animation\+::\+Rx (\begin{DoxyParamCaption}\item[{float}]{theta}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_abeb2341bc0c5fce5f44db071198c6bd7}\index{Animation@{Animation}!Rx@{Rx}}
+\index{Rx@{Rx}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rx()}{Rx()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_abeb2341bc0c5fce5f44db071198c6bd7} 
+glm\+::mat4 Animation\+::\+Rx (\begin{DoxyParamCaption}\item[{float}]{theta}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje X usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a7957ecf8c1cac11af125e6f93ba01bea}\index{Animation@{Animation}!Ry@{Ry}}
+\index{Ry@{Ry}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Ry()}{Ry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_a7957ecf8c1cac11af125e6f93ba01bea} 
+arma\+::\+Mat$<$ float $>$ Animation\+::\+Ry (\begin{DoxyParamCaption}\item[{float}]{theta}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje Y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_abd1a5b9909568ba50d0f05eb0827f027}\index{Animation@{Animation}!Ry@{Ry}}
+\index{Ry@{Ry}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Ry()}{Ry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_abd1a5b9909568ba50d0f05eb0827f027} 
+glm\+::mat4 Animation\+::\+Ry (\begin{DoxyParamCaption}\item[{float}]{theta}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje Y usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a0115c846d13f3b7c76d794427936b71c}\index{Animation@{Animation}!Rz@{Rz}}
+\index{Rz@{Rz}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rz()}{Rz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_a0115c846d13f3b7c76d794427936b71c} 
+arma\+::\+Mat$<$ float $>$ Animation\+::\+Rz (\begin{DoxyParamCaption}\item[{float}]{theta}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje Z. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_ad5f28832f692708a9856ff24c6305949}\index{Animation@{Animation}!Rz@{Rz}}
+\index{Rz@{Rz}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Rz()}{Rz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_ad5f28832f692708a9856ff24c6305949} 
+glm\+::mat4 Animation\+::\+Rz (\begin{DoxyParamCaption}\item[{float}]{theta}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de rotación respecto al eje Z usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & theta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_abb5c3da73289e59bbd0684e0ec507acd}\index{Animation@{Animation}!S@{S}}
+\index{S@{S}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{S()}{S()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_abb5c3da73289e59bbd0684e0ec507acd} 
+arma\+::\+Mat$<$ float $>$ Animation\+::S (\begin{DoxyParamCaption}\item[{float}]{sx}{, }\item[{float}]{sy}{, }\item[{float}]{sz}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de escalamiento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & sx \\
+\hline
+{\em float} & sy \\
+\hline
+{\em float} & sz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a141deb8d8d5157928a62631939b45dd5}\index{Animation@{Animation}!S@{S}}
+\index{S@{S}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{S()}{S()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_a141deb8d8d5157928a62631939b45dd5} 
+glm\+::mat4 Animation\+::S (\begin{DoxyParamCaption}\item[{float}]{sx}{, }\item[{float}]{sy}{, }\item[{float}]{sz}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz de escalamiento usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & sx \\
+\hline
+{\em float} & sy \\
+\hline
+{\em float} & sz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a6a1d52649fa76094a4effc3b07415984}\index{Animation@{Animation}!T@{T}}
+\index{T@{T}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{T()}{T()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_animation_a6a1d52649fa76094a4effc3b07415984} 
+arma\+::\+Mat$<$ float $>$ Animation\+::T (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{, }\item[{float}]{dz}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz traslación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & dx \\
+\hline
+{\em float} & dy \\
+\hline
+{\em float} & dz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+\Hypertarget{class_animation_a7d1fe115a6b04bf50769e11855620f1b}\index{Animation@{Animation}!T@{T}}
+\index{T@{T}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{T()}{T()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_animation_a7d1fe115a6b04bf50769e11855620f1b} 
+glm\+::mat4 Animation\+::T (\begin{DoxyParamCaption}\item[{float}]{dx}{, }\item[{float}]{dy}{, }\item[{float}]{dz}{, }\item[{bool}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Este método regresa una matriz traslación usando glm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & dx \\
+\hline
+{\em float} & dy \\
+\hline
+{\em float} & dz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat $<$float$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/include/Animation.\+h\item 
+C\+:/\+Users/padro/\+GCProyectos/06.\+proyecto/cpp/Animation.\+cpp\end{DoxyCompactItemize}
