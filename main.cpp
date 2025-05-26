@@ -24,7 +24,7 @@ int main(){
 
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
-    // Variables para control de teclas
+    //Variables para control de teclas
     bool release_up = true, release_down = true;
     bool release_left = true, release_right = true;
     bool release_space = true, release_r = true;
@@ -38,7 +38,7 @@ int main(){
         glfwSwapBuffers(window);
 		glfwPollEvents();
 
-        // Controles del carro
+        //Controles del carro
         if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS && release_up) {
             release_up = false;
             car.set_speed(0.1f);
@@ -77,7 +77,7 @@ int main(){
 
         if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && release_space) {
             release_space = false;
-            car.set_speed(-1.0f); // Frenar
+            car.set_speed(-1.0f); //Frenar
         }
         if(glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
             release_space = true;
@@ -91,7 +91,7 @@ int main(){
             release_r = true;
         }
 
-        // Cambiar la vista del carro y el obstáculo.
+        //Cambiar la vista del carro y el obstáculo.
         if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS){
             car.set_view(1);
             obstacle.set_view(1);
@@ -108,14 +108,15 @@ int main(){
             car.set_view(4);
             obstacle.set_view(4);
         }
-        // Cambiar la vista del carro y el obstáculo.
+        //Cambiar la proyección. 8->perspectiva y 9->ortografica
+
         else if (glfwGetKey(window, GLFW_KEY_8) == GLFW_PRESS){
-            car.set_view(8);
-            obstacle.set_view(8);
+            car.set_projection(8);
+            obstacle.set_projection(8);
         }
         else if (glfwGetKey(window, GLFW_KEY_9) == GLFW_PRESS){
-            car.set_view(9);
-            obstacle.set_view(9);
+            car.set_projection(9);
+            obstacle.set_projection(9);
         }
         
     } while ( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS && glfwWindowShouldClose(window) == 0 );

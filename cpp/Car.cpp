@@ -15,9 +15,9 @@ Car::Car (Vertex inital_pos, GLuint programID){
     this->initial_pos = inital_pos;
     this->current_pos = inital_pos;
 
-    // Inicializar velocidad, ángulo de dirección y estado de movimiento
+    //Inicializar velocidad, ángulo de dirección y estado de movimiento
     this->speed = 0.2f;
-    this->steering_angle = 0.0f; // Ángulo de dirección inicial
+    this->steering_angle = 0.0f; //Ángulo de dirección inicial
     this->is_moving = false;
     this->move_index = 0;
 
@@ -36,7 +36,7 @@ Car::Car (Vertex inital_pos, GLuint programID){
 
     this->programID = programID;
 
-    // Configurar ejes para rotación (delanteros)
+    //Configurar ejes para rotación (delanteros)
     this->rotation_axis_p1 = Vertex(initial_pos.get_x(), initial_pos.get_y(), initial_pos.get_z() - 0.5);
     this->rotation_axis_p2 = Vertex(initial_pos.get_x(), initial_pos.get_y(), initial_pos.get_z() + 0.5);
 
@@ -64,7 +64,7 @@ Car::Car (Vertex inital_pos, GLuint programID){
 void Car::set_speed(float inc) {
     this->speed += inc;
     
-    // Limitar velocidad máxima y mínima
+    //Limitar velocidad máxima y mínima
     if(this->speed < 0.0f) this->speed = 0.0f;
     if(this->speed > 1.0f) this->speed = 1.0f;
     
@@ -78,7 +78,7 @@ void Car::set_speed(float inc) {
 void Car::set_steering(float inc) {
     this->steering_angle += inc;
     
-    // Limitar ángulo de dirección
+    //Limitar ángulo de dirección
     if(this->steering_angle < -60.0f) this->steering_angle = -60.0f;
     if(this->steering_angle > 60.0f) this->steering_angle = 60.0f;
     
@@ -93,20 +93,20 @@ void Car::update_position() {
     
     Animation an;
     
-    // Punto actual
+    //Punto actual
     Vertex P1(current_pos.get_x(), current_pos.get_y(), current_pos.get_z());
     
-    // Vector tangente (dirección actual)
+    //Vector tangente (dirección actual)
     Vertex R1(cos(steering_angle * M_PI / 180.0f), 0, sin(steering_angle * M_PI / 180.0f));
     R1 = R1 * speed;
     
-    // Punto final estimado
-    Vertex P4 = P1 + R1 * 2.0f; // Multiplicamos para extender la curva
+    //Punto final estimado
+    Vertex P4 = P1 + R1 * 2.0f; //Multiplicamos para extender la curva
     
-    // Vector tangente final (misma dirección pero puede cambiar si hay volantazo)
+    //Vector tangente final
     Vertex R4 = R1;
     
-    // Generar curva de Hermite
+    //Generar curva de Hermite
     this->trajectory = an.move_hermite(P1, P4, R1, R4, 0.05f);
     this->is_moving = true;
     this->move_index = 0;
@@ -127,7 +127,7 @@ void Car::draw(){
         }
     }
 
-    // Actualizar transformación
+    //Actualizar transformación
     this->transform = glm::mat4(1.0f);
     this->transform = an.T(current_pos.get_x(), current_pos.get_y(), current_pos.get_z(), true) *
                       an.Rp1p2(steering_angle, rotation_axis_p1, rotation_axis_p2, true) * an.S(0.05, 0.05, 0.05, true);
@@ -145,7 +145,7 @@ float Car::get_speed() {
 }
 
 /**
- * @brief Método que resetea el estado del carro a su posición inicial y velocidad predeterminada
+ * @brief Método que resetea el estado del carro a su posición inicial, velocidad predeterminada, ángulo de dirección, sin movimiento y limpia la trayectoria
  */
 void Car::reset() {
     this->current_pos = initial_pos;
@@ -178,7 +178,7 @@ void Car::set_view(unsigned int key){
         this->view = glm::lookAt(
             glm::vec3(0, 0, 5), // Camera is at (0,5,0), in World Space
             glm::vec3(0, 0, 0), // and looks at the origin
-            glm::vec3(0, -11, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+            glm::vec3(0, -1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
         );
     }
     else if(key == 4){

@@ -294,10 +294,10 @@ glm::mat4 Animation::Rz(float theta, bool t){
  * @return Mat <float> 
  */
 glm::mat4 Animation::Rp1p2(float theta, Vertex P1, Vertex P2, bool t) {
-    // Paso 1: Trasladar P1 al origen
+    //Paso 1: Trasladar P1 al origen
     glm::mat4 T1 = this->T(-P1.get_x(), -P1.get_y(), -P1.get_z(), true);
 
-    // Paso 2: Rotar alrededor de Y para alinear el eje con Z
+    //Paso 2: Rotar alrededor de Y para alinear el eje con Z
     float dx = P2.get_x() - P1.get_x();
     float dy = P2.get_y() - P1.get_y();
     float dz = P2.get_z() - P1.get_z();
@@ -313,7 +313,7 @@ glm::mat4 Animation::Rp1p2(float theta, Vertex P1, Vertex P2, bool t) {
         );
     }
 
-    // Paso 3: Rotar alrededor de X para alinear el eje con Y
+    //Paso 3: Rotar alrededor de X para alinear el eje con Y
     float D2 = sqrtf(dx * dx + dy * dy + dz * dz);
 
     glm::mat4 Rx3(1.0f);
@@ -326,21 +326,21 @@ glm::mat4 Animation::Rp1p2(float theta, Vertex P1, Vertex P2, bool t) {
         );
     }
 
-    // Paso 4: Rotar alrededor de Z el ángulo theta
+    //Paso 4: Rotar alrededor de Z el ángulo theta
     glm::mat4 Rz4 = this->Rz(theta, true);
 
-    // Paso 5: Deshacer rotación X
+    //Paso 5: Deshacer rotación X
     glm::mat4 Rx5 = glm::inverse(Rx3);
 
-    // Paso 6: Deshacer rotación Y
+    //Paso 6: Deshacer rotación Y
     glm::mat4 Ry6 = glm::inverse(Ry2);
 
-    // Paso 7: Deshacer traslación
+    //Paso 7: Deshacer traslación
     glm::mat4 T7 = this->T(-P1.get_x(), -P1.get_y(), -P1.get_z(), false);
 
     glm::mat4 result = T7 * Ry6 * Rx5 * Rz4 * Rx3 * Ry2 * T1;
 
-    // Si t es false, invertir la transformación (usar la inversa)
+    //Si t es false, invertir la transformación (usar la inversa)
     if (!t)
         result = glm::inverse(result);
 

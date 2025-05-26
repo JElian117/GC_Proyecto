@@ -12,7 +12,7 @@
 using namespace std;
 
 /**
- * * @brief Esta clase es usada para crear animaciones usando las curvas de Hermite y Bézier. Clase Animation:: Animation object
+ * * @brief Esta clase es usada para crear animaciones usando las curvas de Hermite y Bézier, además de todas las operaciones de Traslación, Escalación y Rotación . Clase Animation:: Animation object
  */
 class Animation{
 public:
